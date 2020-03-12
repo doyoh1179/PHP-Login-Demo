@@ -38,8 +38,12 @@
                   <input class="uk-input" id="form-stacked-text" type="password" required="required" placeholder="Your password">
               </div>
           </div>
-            <button class="uk-button uk-button-default" type="submit">Register</button>
+          
+          <div class="uk-margin uk-alert uk-alert-danger js-error" style="display:none;">
+          </div>
+
           <div class="uk-margin">
+            <button class="uk-button uk-button-default" type="submit">Register</button>
           </div>
 
       </form>

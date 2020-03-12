@@ -5,6 +5,19 @@
   }
 
   define('ALLOW_FOOTER',true);
-  // config as below
+  // Sessions are always turned on
+  if(!isset($_SESSION)) {
+    session_start();
+  }
 
+  // Our config is below
+  // Allow errors
+  error_reporting(-1);
+  ini_set('display_errors', 'On');
+
+
+  // Include the DB.php file;
+  include_once "classes/DB.php";
+
+  $con = DB::getConnection();
 ?>
