@@ -3,6 +3,8 @@
   define('__CONFIG__', true);
 //retuire the config
   require_once "inc/config.php";
+
+  //Page::ForceDashboard();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +40,7 @@
                   <input class="uk-input" id="form-stacked-text" type="password" required="required" placeholder="Your password">
               </div>
           </div>
-          
+
           <div class="uk-margin uk-alert uk-alert-danger js-error" style="display:none;">
           </div>
 
