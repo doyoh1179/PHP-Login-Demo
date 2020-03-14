@@ -31,7 +31,7 @@ class User {
 			$this->reg_time 	= (string) $user->reg_time;
 		} else {
 			// No user.
-			// Redirect to to logout.
+			// Redirect to logout.
 			header("Location: /logout.php"); exit;
 		}
 	}

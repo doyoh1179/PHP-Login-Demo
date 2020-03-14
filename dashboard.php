@@ -4,7 +4,9 @@
 //retuire the config
   require_once "inc/config.php";
 
-  ForceLogin();
+  Page::ForceLogin();
+
+  $User = new User($_SESSION['user_id']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +24,22 @@
 
   <body>
     <div class="uk-section uk-container">
+      <h2>Dashboard</h2>
+      <p>Hello <?php echo $User->email; ?>, you registered at <?php echo $User->reg_time; ?></p>
+      <p><a href="/demo_login/PHP-Login-Demo/logout.php">Logout</a></p>
+      <p>Ideas for extending this system:</p>
+        <ul>
+          <li>NEW FEEDS</li>
+          <li>FRIEND FEED</li>
+          <li>CHANGE EMAIL</li>
+          <li>CHANGE PASSWORD</li>
+          <li>RESET PASSWORD</li>
+          <li>INVITE MODULE </li>
+          <li>ADD FIRST NAME</li>
+          <li>ADD LASTNAME</li>
+          <li>ADD EMAIL CONFIRMATION</li>
+          <li>ADD SMS CONFIRMATION (VIA TWILIO)</li>
+        </ul>
     </div>
 
     <?php require_once "inc/footer.php"; ?>
