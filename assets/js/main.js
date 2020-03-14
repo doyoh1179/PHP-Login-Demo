@@ -32,7 +32,7 @@ $(document)
 			window.location = data.redirect;
 		} else if(data.error !== undefined) {
 			_error
-				.text(data.error)
+				.html(data.error)
 				.show();
 		}
 	})
